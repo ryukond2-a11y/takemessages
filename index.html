@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>タビトモ - LINE風チャット</title>
+</head>
+<body>
+  <div class="app-layout">
+    <!-- サイドバー（グループ一覧） -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>タビトモ</h1>
+      </div>
+      <ul class="room-list">
+        <li class="room-item active">
+          <div class="avatar">🏫</div>
+          <div class="room-info">
+            <div class="room-name">2年3組 京都旅行</div>
+            <div class="last-msg">清水寺の近くのカフェにいるよ！</div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- メインチャットエリア -->
+    <main class="chat-main">
+      <header class="chat-header">
+        <h2>2年3組 京都旅行</h2>
+      </header>
+
+      <!-- メッセージ表示領域 -->
+      <div id="messages-list" class="messages-list"></div>
+
+      <!-- 入力フォーム -->
+      <form id="message-form" class="message-form">
+        <input type="text" id="message-input" placeholder="メッセージを入力..." required autocomplete="off" />
+        <button type="submit">送信</button>
+      </form>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
